@@ -1,1 +1,1 @@
-foto.dsovolley.fun
+http://foto.dsovolley.fun/
