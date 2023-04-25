@@ -31,25 +31,25 @@
             <div class="example">
 
                 <?php
-                $prd = mysqli_query($connect, query: "SELECT * FROM `addImg`");
-                while ($prod = mysqli_fetch_array($prd)){
+                    $prd = mysqli_query($connect, query: "SELECT * FROM `addImg`");
+                    while ($prod = mysqli_fetch_array($prd)){
                 ?>
 
-                        <div class="product__body">
-                            <div class="product__id"> <?= $prod['id'] ?> </div>
-                            <div class="product__content">
-                                <div class="product__image">
-                                    <img src='<?= $prod['image'] ?>'>
-                                </div>
-                            </div>
-                            <h2 class="product__tittle">
-                                <?= $prod['name'] ?>
-                            </h2>
-                            <div class="product__details">
-                                <a href='update.php? id= <?= $prod['id'] ?>' class='btn btn-primary'>UPDATE</a>
-                                <a href='delete.php? id= <?= $prod['id'] ?>' class='btn btn-danger'>DELETE</a>
+                    <div class="product__body">
+                        <div class="product__id"> <?= $prod['id'] ?> </div>
+                        <div class="product__content">
+                            <div class="product__image">
+                                <img src='<?= $prod['image'] ?>'>
                             </div>
                         </div>
+                        <h2 class="product__tittle">
+                            <?= $prod['name'] ?>
+                        </h2>
+                        <div class="product__details">
+                            <a href='update.php? id= <?= $prod['id'] ?>' class='btn btn-primary'>UPDATE</a>
+                            <a href='delete.php? id= <?= $prod['id'] ?>' class='btn btn-danger'>DELETE</a>
+                        </div>
+                    </div>
 
                 <?php } ?>
 
